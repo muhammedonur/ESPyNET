@@ -2,7 +2,7 @@
 
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-from scipy import misc
+import imageio
 import numpy as np
 import sys
 
@@ -209,6 +209,7 @@ with tf.Graph().as_default(), tf.Session() as sess:
                                     np.reshape(visual_target_crops[idx], [TARGET_HEIGHT, TARGET_WIDTH, TARGET_DEPTH])))
                     misc.imsave("results/pynet_img_" + str(idx) + "_level_" + str(LEVEL) + "_iter_" + str(i) + ".jpg",
                                     before_after)
+                    imageio.imwrite("results/pynet_img_" + str(idx) + "_level_" + str(LEVEL) + "_iter_" + str(i) + ".jpg", before_after)
                 idx += 1
 
             training_loss = 0.0

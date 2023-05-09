@@ -1,7 +1,6 @@
 # Copyright 2020 by Andrey Ignatov. All Rights Reserved.
 
 from __future__ import print_function
-from scipy import misc
 from PIL import Image
 import imageio
 import os
