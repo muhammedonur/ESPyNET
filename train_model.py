@@ -3,6 +3,7 @@
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 import imageio
+from PIL import Image
 import numpy as np
 import sys
 
@@ -207,6 +208,7 @@ with tf.Graph().as_default(), tf.Session() as sess:
                 if idx < 4:
                     before_after = np.hstack((crop,
                                     np.reshape(visual_target_crops[idx], [TARGET_HEIGHT, TARGET_WIDTH, TARGET_DEPTH])))
+                    before_after = Image.fromarray((before_after * 255).astype(np.uint8))
                     imageio.imwrite("results/pynet_img_" + str(idx) + "_level_" + str(LEVEL) + "_iter_" + str(i) + ".jpg", before_after)
                 idx += 1
 
