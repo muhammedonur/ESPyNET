@@ -2,7 +2,7 @@
 
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
-import imageio
+import imageio.v2 as imageio
 from PIL import Image
 import numpy as np
 import sys

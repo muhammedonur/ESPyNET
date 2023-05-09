@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 from PIL import Image
-import imageio
+import imageio.v2 as imageio
 import sys
 import os
 
@@ -70,6 +70,9 @@ with tf.Session(config=config) as sess:
             enhanced_tensor = sess.run(enhanced, feed_dict={x_: I})
             enhanced_image = np.reshape(enhanced_tensor, [int(I.shape[1] * DSLR_SCALE), int(I.shape[2] * DSLR_SCALE), 3])
 
+            # To-Do: Image is considered in its pixel but it is not  good way to normalize it. We have to know max and min value.
+            enhanced_image = (255*(enhanced_image - np.min(enhanced_image))/np.ptp(enhanced_image)).astype('uint8')  
+            
             # Save the results as .png images
             photo_name = photo.rsplit(".", 1)[0]
             imageio.imwrite("results/full-resolution/" + photo_name + "_level_" + str(LEVEL) + "_iteration_" + str(restore_iter) + ".png", enhanced_image)

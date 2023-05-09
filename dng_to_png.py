@@ -3,7 +3,7 @@
 # python dng_to_png.py path_to_my_dng_file.dng
 
 import numpy as np
-import imageio
+import imageio.v2 as imageio
 import rawpy
 import sys
 import os

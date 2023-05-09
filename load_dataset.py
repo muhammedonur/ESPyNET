@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 from PIL import Image
-import imageio
+import imageio.v2 as imageio
 import os
 import numpy as np
 
