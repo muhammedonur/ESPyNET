@@ -1,6 +1,7 @@
 # Copyright 2019-2020 by Andrey Ignatov. All Rights Reserved.
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import numpy as np
 import scipy.io
 

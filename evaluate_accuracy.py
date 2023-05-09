@@ -13,7 +13,7 @@ TARGET_SIZE = (PATCH_WIDTH * 2) * (PATCH_HEIGHT * 2) * 3
 config = None
 
 # Path to the dataset:
-dataset_dir = 'raw_images/'
+dataset_dir = '../datasets/zurich-raw-to-rgb/raw_images/'
 
 # Disable gpu (if needed):
 # config = tf.ConfigProto(device_count={'GPU': 0})

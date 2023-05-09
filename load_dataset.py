@@ -42,7 +42,10 @@ def load_test_data(dataset_dir, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE):
         test_data[i, :] = I
         
         I = np.asarray(Image.open(test_directory_dslr + str(i) + '.jpg'))
-        I = misc.imresize(I, DSLR_SCALE / 2, interp='bicubic')
+        I = Image.fromarray(I)
+        size = tuple((np.array(I.size) * (DSLR_SCALE / 2)).astype(int))
+        I = np.array(I.resize(size, Image.BICUBIC))
+
         I = np.float16(np.reshape(I, [1, int(PATCH_WIDTH * DSLR_SCALE), int(PATCH_HEIGHT * DSLR_SCALE), 3])) / 255
         test_answ[i, :] = I
 
@@ -71,7 +74,9 @@ def load_training_batch(dataset_dir, TRAIN_SIZE, PATCH_WIDTH, PATCH_HEIGHT, DSLR
         train_data[i, :] = I
 
         I = np.asarray(Image.open(train_directory_dslr + str(img) + '.jpg'))
-        I = misc.imresize(I, DSLR_SCALE / 2, interp='bicubic')
+        I = Image.fromarray(I)
+        size = tuple((np.array(I.size) * (DSLR_SCALE / 2)).astype(int))
+        I = np.array(I.resize(size, Image.BICUBIC))
         I = np.float16(np.reshape(I, [1, int(PATCH_WIDTH * DSLR_SCALE), int(PATCH_HEIGHT * DSLR_SCALE), 3])) / 255
         train_answ[i, :] = I
 

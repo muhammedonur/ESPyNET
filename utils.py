@@ -1,7 +1,8 @@
 # Copyright 2020 by Andrey Ignatov. All Rights Reserved.
 
 from functools import reduce
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import numpy as np
 import sys
 import os
@@ -23,8 +24,8 @@ def process_command_args(arguments):
     restore_iter = None
     num_train_iters = None
 
-    dataset_dir = 'raw_images/'
-    vgg_dir = 'vgg_pretrained/imagenet-vgg-verydeep-19.mat'
+    dataset_dir = '../datasets/zurich-raw-to-rgb/raw_images/'
+    vgg_dir = '../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat'
 
     for args in arguments:
 
