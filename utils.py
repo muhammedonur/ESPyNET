@@ -88,7 +88,7 @@ def process_test_model_args(arguments):
     level = 0
     restore_iter = None
 
-    dataset_dir = 'raw_images/'
+    dataset_dir = '../datasets/zurich-raw-to-rgb/raw_images/'
     use_gpu = "true"
 
     orig_model = "false"
