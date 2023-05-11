@@ -53,7 +53,9 @@ with tf.Session(config=config) as sess:
     # Processing full-resolution RAW images
 
     test_dir = dataset_dir + "/test/huawei_full_resolution/"
-    test_photos = [f for f in os.listdir(test_dir) if os.path.isfile(test_dir + f)]
+    test_photos = [f for f in os.listdir(test_dir) if os.path.isfile(test_dir + f) and (test_dir + f).split('.')[-1] == "png"]
+    #print(test_photos)
+    #test_photos = []
 
     for photo in test_photos:
 
