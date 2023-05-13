@@ -1,0 +1,84 @@
+ExifTool Version Number         : 11.88
+File Name                       : tmp_bfad94ab3745cbba109925e40359563ee50335f3.dngunknown.image
+Directory                       : /www/www/dl/2/f3af4b4c69b5bf471ce36a510de526ff
+File Size                       : 24 MB
+File Modification Date/Time     : 2023:05:13 23:26:32+02:00
+File Access Date/Time           : 2023:05:13 23:26:32+02:00
+File Inode Change Date/Time     : 2023:05:13 23:26:32+02:00
+File Permissions                : rw-r--r--
+File Type                       : DNG
+File Type Extension             : dng
+MIME Type                       : image/x-adobe-dng
+Exif Byte Order                 : Little-endian (Intel, II)
+Image Width                     : 4032
+Image Height                    : 3024
+Bits Per Sample                 : 16
+Compression                     : Uncompressed
+Photometric Interpretation      : Color Filter Array
+Image Description               : 
+Make                            : samsung
+Camera Model Name               : SM-N975F
+Orientation                     : Horizontal (normal)
+Samples Per Pixel               : 1
+Rows Per Strip                  : 1
+X Resolution                    : 72
+Y Resolution                    : 72
+Planar Configuration            : Chunky
+Resolution Unit                 : inches
+Software                        : N975FXXS8HWC3
+Modify Date                     : 2023:05:13 23:01:24
+Subfile Type                    : Reduced-resolution image
+Strip Offsets                   : 24411840
+Strip Byte Counts               : 571536
+CFA Repeat Pattern Dim          : 2 2
+CFA Pattern 2                   : 1 0 2 1
+Copyright                       : 
+Exposure Time                   : 1/15
+F Number                        : 1.5
+ISO                             : 200
+Exif Version                    : 0221
+Date/Time Original              : 2023:05:13 23:01:24
+Focal Length                    : 4.3 mm
+Sub Sec Time                    : 0093
+Sub Sec Time Original           : 0093
+GPS Version ID                  : 2.2.0.0
+GPS Latitude Ref                : North
+GPS Longitude Ref               : East
+GPS Altitude Ref                : Above Sea Level
+TIFF-EP Standard ID             : 1 0 0 0
+DNG Version                     : 1.4.0.0
+DNG Backward Version            : 1.1.0.0
+Unique Camera Model             : SM-N975F
+CFA Plane Color                 : Red,Green,Blue
+CFA Layout                      : Rectangular
+Black Level Repeat Dim          : 2 2
+Black Level                     : 0 0 0 0
+White Level                     : 1023
+Default Scale                   : 1 1
+Default Crop Origin             : 0 0
+Default Crop Size               : 4032 3024
+Color Matrix 1                  : 0.7861328125 -0.1591796875 -0.142578125 -0.609375 1.54296875 0.033203125 -0.2568359375 0.513671875 0.4423828125
+Color Matrix 2                  : 1.573242188 -0.7939453125 -0.34375 -0.4794921875 1.615234375 -0.2490234375 -0.0673828125 0.3291015625 0.521484375
+Camera Calibration 1            : 0.9873046875 0 0 0 1 0 0 0 1.017578125
+Camera Calibration 2            : 0.9873046875 0 0 0 1 0 0 0 1.017578125
+As Shot Neutral                 : 0.6171875 1 0.54296875
+Calibration Illuminant 1        : D65
+Calibration Illuminant 2        : Standard Light A
+Active Area                     : 0 0 3024 4032
+Forward Matrix 1                : 0.6435546875 0.046875 0.2734375 0.2548828125 0.6689453125 0.076171875 0.0556640625 -0.5712890625 1.340820312
+Forward Matrix 2                : 0.5 0.0576171875 0.4072265625 0.119140625 0.6337890625 0.2470703125 -0.0595703125 -0.9248046875 1.810546875
+Opcode List 2                   : GainMap, GainMap, GainMap, GainMap
+Noise Profile                   : 0.000769490562 0 0.000769490562 0 0.000769490562 0
+Aperture                        : 1.5
+CFA Pattern                     : [Green,Red][Blue,Green]
+Image Size                      : 4032x3024
+Megapixels                      : 12.2
+Shutter Speed                   : 1/15
+Date/Time Original              : 2023:05:13 23:01:24.0093
+Modify Date                     : 2023:05:13 23:01:24.0093
+GPS Altitude                    : 1100 m Above Sea Level
+GPS Latitude                    : 40 deg 0' 14.83" N
+GPS Longitude                   : 32 deg 48' 37.86" E
+Focal Length                    : 4.3 mm
+GPS Position                    : 40 deg 0' 14.83" N, 32 deg 48' 37.86" E
+Light Value                     : 4.1

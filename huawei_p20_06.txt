@@ -1,0 +1,93 @@
+ExifTool Version Number         : 11.88
+File Name                       : tmp_7cc49a4053b564c46f869a9ea71d3959f0f0c826.dngunknown.image
+Directory                       : /www/www/dl/2/62ba6f91d08489577772ecc89d7a2221
+File Size                       : 23 MB
+File Modification Date/Time     : 2023:05:13 23:30:16+02:00
+File Access Date/Time           : 2023:05:13 23:30:16+02:00
+File Inode Change Date/Time     : 2023:05:13 23:30:16+02:00
+File Permissions                : rw-r--r--
+File Type                       : DNG
+File Type Extension             : dng
+MIME Type                       : image/x-adobe-dng
+Exif Byte Order                 : Little-endian (Intel, II)
+Subfile Type                    : Full-resolution image
+Image Width                     : 3968
+Image Height                    : 2976
+Bits Per Sample                 : 16
+Compression                     : Uncompressed
+Photometric Interpretation      : Color Filter Array
+Make                            : HUAWEI
+Camera Model Name               : EML-L09
+Strip Offsets                   : (Binary data 25393 bytes, use -b option to extract)
+Orientation                     : Horizontal (normal)
+Samples Per Pixel               : 1
+Rows Per Strip                  : 1
+Strip Byte Counts               : (Binary data 14879 bytes, use -b option to extract)
+X Resolution                    : 72
+Y Resolution                    : 72
+Planar Configuration            : Chunky
+Resolution Unit                 : inches
+Software                        : HUAWEI/EML-L09/HWEML:8.1.0/HUAWEIEML-L09/41(C432):user/release-keys
+Modify Date                     : 2018:04:06 15:05:04
+XMP Toolkit                     : Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21
+Creator Tool                    : HUAWEI/EML-L09/HWEML:8.1.0/HUAWEIEML-L09/41(C432):user/release-keys
+Rating                          : 1
+Metadata Date                   : 2018:04:09 20:42:39+01:00
+Date Created                    : 2018:04:06 15:05:04
+Document ID                     : 2FB1E1EF896D5308499835261BCF1BD1
+Original Document ID            : 2FB1E1EF896D5308499835261BCF1BD1
+Instance ID                     : xmp.iid:5a6395fe-fc5a-49f3-9384-5e93bfb70cab
+Format                          : image/dng
+Has Settings                    : False
+Has Crop                        : False
+Already Applied                 : False
+Raw File Name                   : IMG_20180406_150504.dng
+Photographic Sensitivity        : 50
+History Action                  : saved, saved
+History Instance ID             : xmp.iid:7e900dde-6ab5-4e6e-b850-dfcc9819dd46, xmp.iid:5a6395fe-fc5a-49f3-9384-5e93bfb70cab
+History When                    : 2018:04:09 20:42:39+01:00, 2018:04:09 20:42:39+01:00
+History Software Agent          : Adobe Photoshop Camera Raw 10.3, Adobe Photoshop Camera Raw 10.3 (Macintosh)
+History Changed                 : /metadata, /metadata
+CFA Repeat Pattern Dim          : 2 2
+CFA Pattern 2                   : 2 1 1 0
+Exposure Time                   : 1/1800
+F Number                        : 1.8
+Exif Version                    : 0221
+Shutter Speed Value             : 1/1800
+Aperture Value                  : 1.8
+ISO                             : 50
+Date/Time Original              : 2018:04:06 15:05:04
+Focal Length                    : 4.0 mm
+TIFF-EP Standard ID             : 1 0 0 0
+DNG Version                     : 1.4.0.0
+DNG Backward Version            : 1.1.0.0
+Unique Camera Model             : EML-L09-HUAWEI-HUAWEI
+CFA Plane Color                 : Red,Green,Blue
+CFA Layout                      : Rectangular
+Black Level Repeat Dim          : 2 2
+Black Level                     : 64 64 64 64
+White Level                     : 1023
+Default Scale                   : 1 1
+Default Crop Origin             : 8 8
+Default Crop Size               : 3952 2960
+Color Matrix 1                  : 1.068359375 -0.298828125 -0.142578125 -0.431640625 1.35546875 0.05078125 -0.1015625 0.244140625 0.5859375
+Color Matrix 2                  : 2.209960938 -1.33203125 -0.1416015625 -0.189453125 1.227539062 -0.0546875 -0.0234375 0.1826171875 0.603515625
+Camera Calibration 1            : 1 0 0 0 1 0 0 0 1
+Camera Calibration 2            : 1 0 0 0 1 0 0 0 1
+As Shot Neutral                 : 0.450867052 1 0.5983561644
+Baseline Exposure               : 0
+Calibration Illuminant 1        : D65
+Calibration Illuminant 2        : Standard Light A
+Active Area                     : 0 0 2976 3968
+Forward Matrix 1                : 0.59765625 0.2275390625 0.1357421875 0.1943359375 0.8115234375 -0.005859375 0.0146484375 -0.21875 1.024414062
+Forward Matrix 2                : 0.4306640625 0.3095703125 0.220703125 0.0283203125 0.88671875 0.0849609375 0.0087890625 -0.6396484375 1.451171875
+Opcode List 2                   : GainMap, GainMap, GainMap, GainMap
+Opcode List 3                   : 
+Noise Profile                   : 0.00025822882 2.32350645e-06 0.00025822882 2.32350645e-06 0.00025822882 2.32350645e-06
+Aperture                        : 1.8
+CFA Pattern                     : [Blue,Green][Green,Red]
+Image Size                      : 3968x2976
+Megapixels                      : 11.8
+Shutter Speed                   : 1/1800
+Focal Length                    : 4.0 mm
+Light Value                     : 13.5
