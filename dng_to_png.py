@@ -18,6 +18,11 @@ def extract_bayer_channels(raw):
 
     return ch_R, ch_Gr, ch_B, ch_Gb
 
+    # CFA Pattern : [Green,Red]
+    #               [Blue,Green]
+    # Image Width   : 4032
+    # Image Height  : 3024
+
 
 if __name__ == "__main__":
 
