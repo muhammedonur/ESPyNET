@@ -44,7 +44,7 @@ with tf.Session(config=config) as sess:
 
     # Restore your own model from a checkpoint
     # saver.restore(sess, "path_to_your_checkpoint"), e.g.:
-    saver.restore(sess, "models/original/pynet_level_0.ckpt")
+    saver.restore(sess, "../models/PyNET/original/pynet_level_0.ckpt")
 
     print("Loading test data...")
     test_data, test_answ = load_test_data(dataset_dir, PATCH_WIDTH, PATCH_HEIGHT, 2.0)
