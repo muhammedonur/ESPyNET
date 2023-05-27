@@ -24,7 +24,7 @@ def process_command_args(arguments):
     restore_iter = None
     num_train_iters = None
 
-    dataset_dir = '../datasets/zurich-raw-to-rgb/raw_images/'
+    dataset_dir = '../datasets/raw_moire_image_dataset/'
     vgg_dir = '../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat'
 
     for args in arguments:

@@ -11,7 +11,7 @@ from model import PyNET
 import utils
 
 from load_dataset import extract_bayer_channels
-IMAGE_HEIGHT, IMAGE_WIDTH = 1472, 1984
+IMAGE_HEIGHT, IMAGE_WIDTH = 256, 256
 
 LEVEL, restore_iter, dataset_dir, use_gpu, orig_model = utils.process_test_model_args(sys.argv)
 DSLR_SCALE = float(1) / (2 ** (LEVEL - 1))
@@ -52,16 +52,16 @@ with tf.Session(config=config) as sess:
 
     # Processing full-resolution RAW images
 
-    test_dir = dataset_dir + "/test/huawei_full_resolution/"
-    test_photos = [f for f in os.listdir(test_dir) if os.path.isfile(test_dir + f) and (test_dir + f).split('.')[-1] == "png"]
-    #print(test_photos)
-    #test_photos = []
+    test_dir = "../datasets/raw_moire_image_dataset/testset/moire_RAW_npz/"
+    test_photos = [f for f in os.listdir(test_dir) if os.path.isfile(test_dir + f) and (test_dir + f).split('.')[-1] == "npz"]
 
     for photo in test_photos:
+            
+            I = np.load(test_dir + photo)["patch_data"]
 
             print("Processing image " + photo)
 
-            I = np.asarray(imageio.imread((test_dir + photo)))
+            #I = np.asarray(imageio.imread((test_dir + photo)))
             I = extract_bayer_channels(I)
 
             I = I[0:IMAGE_HEIGHT, 0:IMAGE_WIDTH, :]

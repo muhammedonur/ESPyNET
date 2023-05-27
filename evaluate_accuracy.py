@@ -9,12 +9,12 @@ import utils
 
 from load_dataset import load_test_data
 
-PATCH_WIDTH, PATCH_HEIGHT = 224, 224
+PATCH_WIDTH, PATCH_HEIGHT = 256, 256
 TARGET_SIZE = (PATCH_WIDTH * 2) * (PATCH_HEIGHT * 2) * 3
 config = None
 
 # Path to the dataset:
-dataset_dir = '../datasets/zurich-raw-to-rgb/raw_images/'
+dataset_dir = '../datasets/raw_moire_image_dataset/'
 
 # Disable gpu (if needed):
 # config = tf.ConfigProto(device_count={'GPU': 0})

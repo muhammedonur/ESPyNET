@@ -15,6 +15,7 @@ def extract_bayer_channels(raw):
     ch_Gb = raw[0::2, 1::2]
     ch_R  = raw[0::2, 0::2]
     ch_Gr = raw[1::2, 0::2]
+    
 
     RAW_combined = np.dstack((ch_B, ch_Gb, ch_R, ch_Gr))
     RAW_norm = RAW_combined.astype(np.float32) / (4 * 255)
@@ -24,37 +25,38 @@ def extract_bayer_channels(raw):
 
 def load_test_data(dataset_dir, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE):
 
-    test_directory_dslr = dataset_dir + 'test/canon/'
-    test_directory_phone = dataset_dir + 'test/huawei_raw/'
+    test_directory_dslr = dataset_dir + 'testset/gt_RGB/'
+    test_directory_phone = dataset_dir + 'testset/moire_RAW_npz/'
 
     # NUM_TEST_IMAGES = 1204
     NUM_TEST_IMAGES = len([name for name in os.listdir(test_directory_phone)
                            if os.path.isfile(os.path.join(test_directory_phone, name))])
-
+    print("NUM_TEST_IMAGES: ", NUM_TEST_IMAGES)
     test_data = np.zeros((NUM_TEST_IMAGES, PATCH_WIDTH, PATCH_HEIGHT, 4))
     test_answ = np.zeros((NUM_TEST_IMAGES, int(PATCH_WIDTH * DSLR_SCALE), int(PATCH_HEIGHT * DSLR_SCALE), 3))
 
-    for i in range(0, NUM_TEST_IMAGES):
-
-        I = np.asarray(imageio.imread((test_directory_phone + str(i) + '.png')))
+    for i in range(1, NUM_TEST_IMAGES+1):
+        I = np.load(test_directory_phone + str(i) + '_m.npz')["patch_data"]
+        import pdb; pdb.set_trace();
+        #I = np.asarray(imageio.imread(()))
         I = extract_bayer_channels(I)
-        test_data[i, :] = I
+        test_data[i-1, :] = I
         
-        I = np.asarray(Image.open(test_directory_dslr + str(i) + '.jpg'))
+        I = np.asarray(Image.open(test_directory_dslr + str(i) + '_gt.png'))
         I = Image.fromarray(I)
         size = tuple((np.array(I.size) * (DSLR_SCALE / 2)).astype(int))
         I = np.array(I.resize(size, Image.BICUBIC))
 
         I = np.float16(np.reshape(I, [1, int(PATCH_WIDTH * DSLR_SCALE), int(PATCH_HEIGHT * DSLR_SCALE), 3])) / 255
-        test_answ[i, :] = I
+        test_answ[i-1, :] = I
 
     return test_data, test_answ
 
 
 def load_training_batch(dataset_dir, TRAIN_SIZE, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE):
 
-    train_directory_dslr = dataset_dir + 'train/canon/'
-    train_directory_phone = dataset_dir + 'train/huawei_raw/'
+    train_directory_dslr = dataset_dir + 'trainset/gt_RGB/'
+    train_directory_phone = dataset_dir + 'trainset/moire_RAW_npz/'
 
     # NUM_TRAINING_IMAGES = 46839
     NUM_TRAINING_IMAGES = len([name for name in os.listdir(train_directory_phone)
@@ -68,11 +70,12 @@ def load_training_batch(dataset_dir, TRAIN_SIZE, PATCH_WIDTH, PATCH_HEIGHT, DSLR
     i = 0
     for img in TRAIN_IMAGES:
 
-        I = np.asarray(imageio.imread((train_directory_phone + str(img) + '.png')))
+        #I = np.asarray(imageio.imread((train_directory_phone + str(img) + '.png')))
+        I = np.load(train_directory_phone + str(img) + "_m.npz")["patch_data"]
         I = extract_bayer_channels(I)
         train_data[i, :] = I
 
-        I = np.asarray(Image.open(train_directory_dslr + str(img) + '.jpg'))
+        I = np.asarray(Image.open(train_directory_dslr + str(img) + '_gt.png'))
         I = Image.fromarray(I)
         size = tuple((np.array(I.size) * (DSLR_SCALE / 2)).astype(int))
         I = np.array(I.resize(size, Image.BICUBIC))
