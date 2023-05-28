@@ -38,8 +38,6 @@ with tf.Graph().as_default(), tf.Session() as sess:
     training_phone_ = tf.placeholder(tf.float32, [batch_size, PATCH_HEIGHT, PATCH_WIDTH, 4])
     training_dslr_ = tf.placeholder(tf.float32, [batch_size, TARGET_HEIGHT, TARGET_WIDTH, TARGET_DEPTH])
 
-    test_phone_ = tf.placeholder(tf.float32, [batch_size, PATCH_HEIGHT*2, PATCH_WIDTH*2, 4])
-    test_dslr_ = tf.placeholder(tf.float32, [batch_size, TARGET_HEIGHT*2, TARGET_WIDTH*2, TARGET_DEPTH])
 
     # Get the processed enhanced image
 
@@ -115,7 +113,7 @@ with tf.Graph().as_default(), tf.Session() as sess:
     # Loading training and test data
 
     print("Loading test data...")
-    test_data, test_answ = load_test_data(dataset_dir, int(PATCH_WIDTH*2), int(PATCH_HEIGHT*2), DSLR_SCALE)
+    test_data, test_answ = load_test_data(dataset_dir, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE)
     print("Test data was loaded\n")
 
     print("Loading training data...")
