@@ -60,7 +60,6 @@ def load_training_batch(dataset_dir, TRAIN_SIZE, PATCH_WIDTH, PATCH_HEIGHT, DSLR
     # NUM_TRAINING_IMAGES = 46839
     NUM_TRAINING_IMAGES = len([name for name in os.listdir(train_directory_phone)
                                if os.path.isfile(os.path.join(train_directory_phone, name))])
-    print("NUM_TRAINING_IMAGES: ", NUM_TRAINING_IMAGES)
 
     TRAIN_IMAGES = np.random.choice(np.arange(0, NUM_TRAINING_IMAGES), TRAIN_SIZE, replace=False)
 
