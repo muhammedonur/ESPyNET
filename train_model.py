@@ -19,7 +19,7 @@ LEVEL, batch_size, train_size, learning_rate, restore_iter, num_train_iters, dat
 
 # Defining the size of the input and target image patches
 
-PATCH_WIDTH, PATCH_HEIGHT = 256, 256
+PATCH_WIDTH, PATCH_HEIGHT = 128, 128
 
 DSLR_SCALE = float(1) / (2 ** (LEVEL - 1))
 TARGET_WIDTH = int(PATCH_WIDTH * DSLR_SCALE)
@@ -69,10 +69,10 @@ with tf.Graph().as_default(), tf.Session() as sess:
     loss_psnr = 20 * utils.log10(1.0 / tf.sqrt(loss_mse))
 
     # SSIM loss
-    loss_ssim = tf.reduce_mean(tf.image.ssim(enhanced, training_dslr_, 1.0))
+    loss_ssim = tf.reduce_mean(tf.image.ssim(enhanced, training_dslr_, 1.0, filter_size=8))
 
     # MS-SSIM loss
-    loss_ms_ssim = tf.reduce_mean(tf.image.ssim_multiscale(enhanced, training_dslr_, 1.0))
+    loss_ms_ssim = tf.reduce_mean(tf.image.ssim_multiscale(enhanced, training_dslr_, 1.0, filter_size=8))
 
     # Content loss
     CONTENT_LAYER = 'relu5_4'

@@ -35,7 +35,7 @@ def load_test_data(dataset_dir, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE):
     test_data = np.zeros((NUM_TEST_IMAGES, PATCH_WIDTH, PATCH_HEIGHT, 4))
     test_answ = np.zeros((NUM_TEST_IMAGES, int(PATCH_WIDTH * DSLR_SCALE), int(PATCH_HEIGHT * DSLR_SCALE), 3))
 
-    for i in range(1, NUM_TEST_IMAGES+1):
+    for i in range(0, NUM_TEST_IMAGES):
         I = np.load(test_directory_phone + str(i) + '_m.npz')["patch_data"]
         #I = np.asarray(imageio.imread(()))
         I = extract_bayer_channels(I)
@@ -54,14 +54,15 @@ def load_test_data(dataset_dir, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE):
 
 def load_training_batch(dataset_dir, TRAIN_SIZE, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE):
 
-    train_directory_dslr = dataset_dir + 'testset/gt_RGB/'
-    train_directory_phone = dataset_dir + 'testset/moire_RAW_npz/'
+    train_directory_dslr = dataset_dir + 'trainset/gt_RGB/'
+    train_directory_phone = dataset_dir + 'trainset/moire_RAW_npz/'
 
     # NUM_TRAINING_IMAGES = 46839
     NUM_TRAINING_IMAGES = len([name for name in os.listdir(train_directory_phone)
                                if os.path.isfile(os.path.join(train_directory_phone, name))])
+    print("NUM_TRAINING_IMAGES: ", NUM_TRAINING_IMAGES)
 
-    TRAIN_IMAGES = np.random.choice(np.arange(1, NUM_TRAINING_IMAGES), TRAIN_SIZE, replace=False)
+    TRAIN_IMAGES = np.random.choice(np.arange(0, NUM_TRAINING_IMAGES), TRAIN_SIZE, replace=False)
 
     train_data = np.zeros((TRAIN_SIZE, PATCH_WIDTH, PATCH_HEIGHT, 4))
     train_answ = np.zeros((TRAIN_SIZE, int(PATCH_WIDTH * DSLR_SCALE), int(PATCH_HEIGHT * DSLR_SCALE), 3))
