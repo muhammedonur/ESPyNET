@@ -46,9 +46,9 @@ with tf.Session(config=config) as sess:
     saver = tf.train.Saver()
 
     if orig_model == "true":
-        saver.restore(sess, "../models/PyNET/original/pynet_level_0.ckpt")
+        saver.restore(sess, "../models/PyNET_Moire/original/pynet_level_0.ckpt")
     else:
-        saver.restore(sess, "../models/PyNET/pynet_level_" + str(LEVEL) + "_iteration_" + str(restore_iter) + ".ckpt")
+        saver.restore(sess, "../models/PyNET_Moire/pynet_level_" + str(LEVEL) + "_iteration_" + str(restore_iter) + ".ckpt")
 
     # Processing full-resolution RAW images
 
