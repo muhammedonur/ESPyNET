@@ -219,7 +219,7 @@ with tf.Graph().as_default(), tf.Session() as sess:
             saver.save(sess, "models/pynet_level_" + str(LEVEL) + "_iteration_" + str(i) + ".ckpt", write_meta_graph=False)
 
         # Loading new training data
-        if i % 100 == 0:
+        if i % 1000 == 0:
 
             del train_data
             del train_answ

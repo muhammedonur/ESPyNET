@@ -1,0 +1,305 @@
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % python train_model.py level=5 batch_size=50 num_train_iters=5000
+WARNING:tensorflow:From /Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+The following parameters will be applied for CNN training:
+Training level: 5
+Batch size: 50
+Learning rate: 5e-05
+Training iterations: 5000
+Evaluation step: 1000
+Restore Iteration: None
+Path to the dataset: ../datasets/raw_moire_image_dataset/
+Path to VGG-19 network: ../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat
+Metal device set to: Apple M1 Max
+
+systemMemory: 32.00 GB
+maxCacheSize: 10.67 GB
+
+Initializing variables
+2023-06-01 23:45:23.389060: W tensorflow/tsl/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+Loading test data...
+NUM_TEST_IMAGES:  6318
+Test data was loaded
+
+Loading training data...
+Training data was loaded
+
+Training network
+step 0 | training: 0.0172, test: 14.52 | content: 0.9161, mse: 0.1452, psnr: 8.42
+
+step 1000 | training: 1.61, test: 1.069 | content: 0.1087, mse: 0.01069, psnr: 21.6
+
+step 2000 | training: 0.8621, test: 0.9178 | content: 0.09932, mse: 0.009178, psnr: 22.95
+
+step 3000 | training: 0.7544, test: 0.769 | content: 0.07523, mse: 0.00769, psnr: 23.38
+
+step 4000 | training: 0.6433, test: 0.846 | content: 0.07012, mse: 0.00846, psnr: 23.53
+
+step 5000 | training: 0.6299, test: 0.8799 | content: 0.07964, mse: 0.008799, psnr: 22.64
+
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % python train_model.py level=4 batch_size=50 num_train_iters=5000
+WARNING:tensorflow:From /Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+The following parameters will be applied for CNN training:
+Training level: 4
+Batch size: 50
+Learning rate: 5e-05
+Training iterations: 5000
+Evaluation step: 1000
+Restore Iteration: 5000
+Path to the dataset: ../datasets/raw_moire_image_dataset/
+Path to VGG-19 network: ../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat
+Metal device set to: Apple M1 Max
+
+systemMemory: 32.00 GB
+maxCacheSize: 10.67 GB
+
+Initializing variables
+2023-06-02 00:02:45.037992: W tensorflow/tsl/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+Restoring Variables
+Loading test data...
+NUM_TEST_IMAGES:  6318
+Test data was loaded
+
+Loading training data...
+NUM_TRAINING_IMAGES:  56862
+Training data was loaded
+
+Training network
+step 0 | training: 0.01559, test: 12.15 | content: 35.03, mse: 0.1215, psnr: 9.341
+
+NUM_TRAINING_IMAGES:  56862
+step 1000 | training: 1.005, test: 0.7829 | content: 6.687, mse: 0.007829, psnr: 22.95
+
+NUM_TRAINING_IMAGES:  56862
+step 2000 | training: 0.6233, test: 0.6924 | content: 4.788, mse: 0.006924, psnr: 23.46
+
+NUM_TRAINING_IMAGES:  56862
+^CTraceback (most recent call last):
+  File "/Users/mpo/projects/ESPyNET/train_model.py", line 161, in <module>
+    [loss_temp, temp] = sess.run([loss_generator, train_step_gen], feed_dict={training_phone_: phone_images, training_dslr_: dslr_images})
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 968, in run
+    result = self._run(None, fetches, feed_dict, options_ptr,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1191, in _run
+    results = self._do_run(handle, final_targets, final_fetches,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1371, in _do_run
+    return self._do_call(_run_fn, feeds, fetches, targets, options,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1378, in _do_call
+    return fn(*args)
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1361, in _run_fn
+    return self._call_tf_sessionrun(options, feed_dict, fetch_list,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1454, in _call_tf_sessionrun
+    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,
+KeyboardInterrupt
+
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % 
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % 
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % python train_model.py level=3 batch_size=50 num_train_iters=5000
+WARNING:tensorflow:From /Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+The following parameters will be applied for CNN training:
+Training level: 3
+Batch size: 50
+Learning rate: 5e-05
+Training iterations: 5000
+Evaluation step: 1000
+Restore Iteration: 2000
+Path to the dataset: ../datasets/raw_moire_image_dataset/
+Path to VGG-19 network: ../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat
+Metal device set to: Apple M1 Max
+
+systemMemory: 32.00 GB
+maxCacheSize: 10.67 GB
+
+Initializing variables
+2023-06-02 00:18:14.506380: W tensorflow/tsl/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+Restoring Variables
+Loading test data...
+NUM_TEST_IMAGES:  6318
+Test data was loaded
+
+Loading training data...
+NUM_TRAINING_IMAGES:  56862
+Training data was loaded
+
+Training network
+step 0 | training: 0.1528, test: 127.8 | content: 114, mse: 0.1374, psnr: 8.754
+
+NUM_TRAINING_IMAGES:  56862
+step 1000 | training: 33.98, test: 25.03 | content: 21.87, mse: 0.03161, psnr: 15.56
+
+NUM_TRAINING_IMAGES:  56862
+step 2000 | training: 18.65, test: 18.81 | content: 16.95, mse: 0.01856, psnr: 18.57
+
+NUM_TRAINING_IMAGES:  56862
+step 3000 | training: 15.85, test: 16.18 | content: 14.85, mse: 0.01331, psnr: 20.1
+
+NUM_TRAINING_IMAGES:  56862
+step 4000 | training: 14.26, test: 15.94 | content: 14.8, mse: 0.01136, psnr: 20.8
+
+NUM_TRAINING_IMAGES:  56862
+^C^CTraceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/framework/ops.py", line 5927, in get_controller
+    yield g
+  File "/Users/mpo/projects/ESPyNET/train_model.py", line 161, in <module>
+    [loss_temp, temp] = sess.run([loss_generator, train_step_gen], feed_dict={training_phone_: phone_images, training_dslr_: dslr_images})
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 968, in run
+    result = self._run(None, fetches, feed_dict, options_ptr,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1191, in _run
+    results = self._do_run(handle, final_targets, final_fetches,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1371, in _do_run
+    return self._do_call(_run_fn, feeds, fetches, targets, options,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1378, in _do_call
+    return fn(*args)
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1361, in _run_fn
+    return self._call_tf_sessionrun(options, feed_dict, fetch_list,
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1454, in _call_tf_sessionrun
+    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mpo/projects/ESPyNET/train_model.py", line 226, in <module>
+    train_data, train_answ = load_training_batch(dataset_dir, train_size, PATCH_WIDTH, PATCH_HEIGHT, DSLR_SCALE)
+  File "/Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/client/session.py", line 1653, in __exit__
+    close_thread.join(30.0)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 1057, in join
+    self._wait_for_tstate_lock(timeout=max(timeout, 0))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 1069, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % python train_model.py level=2 batch_size=50 num_train_iters=5000
+WARNING:tensorflow:From /Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+The following parameters will be applied for CNN training:
+Training level: 2
+Batch size: 50
+Learning rate: 5e-05
+Training iterations: 5000
+Evaluation step: 1000
+Restore Iteration: 4000
+Path to the dataset: ../datasets/raw_moire_image_dataset/
+Path to VGG-19 network: ../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat
+Metal device set to: Apple M1 Max
+
+systemMemory: 32.00 GB
+maxCacheSize: 10.67 GB
+
+Initializing variables
+2023-06-02 01:31:55.097585: W tensorflow/tsl/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+Restoring Variables
+Loading test data...
+NUM_TEST_IMAGES:  6318
+Test data was loaded
+
+Loading training data...
+Training data was loaded
+
+Training network
+step 0 | training: 0.07363, test: 75.51 | content: 61.1, mse: 0.1441, psnr: 8.616
+
+step 1000 | training: 23.32, test: 16.44 | content: 13.51, mse: 0.0293, psnr: 16.39
+
+step 2000 | training: 13.92, test: 13.07 | content: 11.32, mse: 0.0175, psnr: 18.78
+
+step 3000 | training: 11.45, test: 10.87 | content: 9.609, mse: 0.01266, psnr: 20.24
+
+step 4000 | training: 9.915, test: 9.868 | content: 8.818, mse: 0.01049, psnr: 20.89
+
+step 5000 | training: 8.963, test: 9.697 | content: 8.741, mse: 0.00956, psnr: 21.25
+
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % python train_model.py level=1 batch_size=50 num_train_iters=5000
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % 
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % python train_model.py level=1 batch_size=50 num_train_iters=5000
+WARNING:tensorflow:From /Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+The following parameters will be applied for CNN training:
+Training level: 1
+Batch size: 50
+Learning rate: 5e-05
+Training iterations: 5000
+Evaluation step: 1000
+Restore Iteration: 5000
+Path to the dataset: ../datasets/raw_moire_image_dataset/
+Path to VGG-19 network: ../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat
+Metal device set to: Apple M1 Max
+
+systemMemory: 32.00 GB
+maxCacheSize: 10.67 GB
+
+Initializing variables
+2023-06-02 08:48:04.506543: W tensorflow/tsl/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+Restoring Variables
+Loading test data...
+NUM_TEST_IMAGES:  6318
+Test data was loaded
+
+Loading training data...
+Training data was loaded
+
+Training network
+step 0 | training: 0.02728, test: 29.72 | content: 22.31, mse: 0.1483, psnr: 8.569, ms-ssim: 0.2655
+
+step 1000 | training: 16.32, test: 10.31 | content: 9.583, mse: 0.01454, psnr: 19.17, ms-ssim: 0.9213
+
+
+step 2000 | training: 7.959, test: 7.408 | content: 6.85, mse: 0.01116, psnr: 20.19, ms-ssim: 0.9361
+
+step 3000 | training: 6.171, test: 6.494 | content: 6.049, mse: 0.00889, psnr: 21.13, ms-ssim: 0.9427
+
+step 4000 | training: 5.578, test: 5.952 | content: 5.531, mse: 0.008425, psnr: 21.29, ms-ssim: 0.9455
+
+step 5000 | training: 5.078, test: 5.572 | content: 5.189, mse: 0.007655, psnr: 21.79, ms-ssim: 0.9492
+
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % 
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % python train_model.py level=0 batch_size=24 num_train_iters=5000
+WARNING:tensorflow:From /Users/mpo/projects/venv/ESPyNET/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+The following parameters will be applied for CNN training:
+Training level: 0
+Batch size: 24
+Learning rate: 5e-05
+Training iterations: 5000
+Evaluation step: 1000
+Restore Iteration: 5000
+Path to the dataset: ../datasets/raw_moire_image_dataset/
+Path to VGG-19 network: ../models/vgg_pretrained/imagenet-vgg-verydeep-19.mat
+Metal device set to: Apple M1 Max
+
+systemMemory: 32.00 GB
+maxCacheSize: 10.67 GB
+
+Initializing variables
+2023-06-03 00:44:05.657635: W tensorflow/tsl/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+Restoring Variables
+Loading test data...
+NUM_TEST_IMAGES:  6318
+Test data was loaded
+
+Loading training data...
+Training data was loaded
+
+Training network
+step 0 | training: 0.02303, test: 23.88 | content: 11.71, mse: 0.1496, psnr: 8.553, ms-ssim: 0.3747
+
+step 1000 | training: 11.65, test: 10.21 | content: 6.984, mse: 0.01808, psnr: 18.65, ms-ssim: 0.9089
+
+step 2000 | training: 9.043, test: 8.617 | content: 5.685, mse: 0.01332, psnr: 19.78, ms-ssim: 0.9275
+
+step 3000 | training: 7.662, test: 7.687 | content: 4.947, mse: 0.01071, psnr: 20.55, ms-ssim: 0.9352
+
+step 4000 | training: 7.037, test: 7.445 | content: 4.82, mse: 0.01007, psnr: 20.91, ms-ssim: 0.9383
+
+step 5000 | training: 6.654, test: 6.889 | content: 4.413, mse: 0.008582, psnr: 21.58, ms-ssim: 0.9417
+
+(ESPyNET) mpo@mpos-MacBook-Pro ESPyNET % 
